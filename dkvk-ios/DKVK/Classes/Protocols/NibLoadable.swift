@@ -5,7 +5,7 @@
 //  Created by Hadevs on 02/12/2018.
 //  Copyright © 2018 Hadevs. All rights reserved.
 //
-
+//Typealiases.swift
 import UIKit
 
 protocol NibLoadable: class {

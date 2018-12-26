@@ -2,7 +2,7 @@
 //  Typealiases.swift
 //  DKVK
 //
-//  Created by Hadevs on 02/12/2018.
+//  Created by Вячеслав Лойе on 26/12/2018.
 //  Copyright © 2018 Hadevs. All rights reserved.
 //
 
