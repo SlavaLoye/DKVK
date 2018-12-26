@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6CFDC8B221D3BD4100232DBD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6CFDC8B121D3BD4000232DBD /* GoogleService-Info.plist */; };
 		6CFDC8B421D3C2C300232DBD /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFDC8B321D3C2C300232DBD /* Typealiases.swift */; };
+		6CFDC8B621D3C45000232DBD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6CFDC8B521D3C45000232DBD /* GoogleService-Info.plist */; };
 		7C61EA3321C6BECD00D1BA6A /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C61EA3221C6BECD00D1BA6A /* RegisterModel.swift */; };
 		7C61EA3521C6BF1300D1BA6A /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C61EA3421C6BF1300D1BA6A /* Sex.swift */; };
 		7C61EA3721C6C06100D1BA6A /* Extensions+UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C61EA3621C6C06100D1BA6A /* Extensions+UIViewController.swift */; };
@@ -56,8 +56,8 @@
 /* Begin PBXFileReference section */
 		22BBCB95EDE0DA29835604C1 /* Pods_DKVK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DKVK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54341E1F00487674AA461E73 /* Pods-DKVK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DKVK.release.xcconfig"; path = "Pods/Target Support Files/Pods-DKVK/Pods-DKVK.release.xcconfig"; sourceTree = "<group>"; };
-		6CFDC8B121D3BD4000232DBD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6CFDC8B321D3C2C300232DBD /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
+		6CFDC8B521D3C45000232DBD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7C61EA3221C6BECD00D1BA6A /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		7C61EA3421C6BF1300D1BA6A /* Sex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sex.swift; sourceTree = "<group>"; };
 		7C61EA3621C6C06100D1BA6A /* Extensions+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIViewController.swift"; sourceTree = "<group>"; };
@@ -171,7 +171,6 @@
 		7CAAAD0121B44BD700FBF963 /* DKVK */ = {
 			isa = PBXGroup;
 			children = (
-				7CAAAD0E21B44BD900FBF963 /* Info.plist */,
 				7CAAAD2421B44D6500FBF963 /* Classes */,
 				7CAAAD2521B44D7E00FBF963 /* Resources */,
 			);
@@ -190,7 +189,6 @@
 		7CAAAD2421B44D6500FBF963 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				6CFDC8B121D3BD4000232DBD /* GoogleService-Info.plist */,
 				7CAAAD0221B44BD700FBF963 /* AppDelegate.swift */,
 				7C9937D421C6C9900063AD5B /* Help files */,
 				7C61EA3821C6C7A400D1BA6A /* Manager */,
@@ -208,6 +206,8 @@
 			isa = PBXGroup;
 			children = (
 				7CAAAD0921B44BD900FBF963 /* Assets.xcassets */,
+				7CAAAD0E21B44BD900FBF963 /* Info.plist */,
+				6CFDC8B521D3C45000232DBD /* GoogleService-Info.plist */,
 				7CAAAD0B21B44BD900FBF963 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
@@ -443,8 +443,8 @@
 				7CAAAD2321B44C3F00FBF963 /* ViewController.xib in Resources */,
 				7CAAAD0A21B44BD900FBF963 /* Assets.xcassets in Resources */,
 				7CAAAD3121B4545F00FBF963 /* RegisterViewController.xib in Resources */,
+				6CFDC8B621D3C45000232DBD /* GoogleService-Info.plist in Resources */,
 				7CF5607421BEE55B00A39099 /* TextFieldTableViewCell.xib in Resources */,
-				6CFDC8B221D3BD4100232DBD /* GoogleService-Info.plist in Resources */,
 				7CF5606E21BEE1A300A39099 /* TextTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -694,7 +694,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G9EVQJ4C2M;
-				INFOPLIST_FILE = DKVK/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DKVK/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -713,7 +713,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G9EVQJ4C2M;
-				INFOPLIST_FILE = DKVK/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DKVK/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

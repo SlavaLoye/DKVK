@@ -9,6 +9,7 @@
 import UIKit
 
 final class StartRouter {
+    
 	static let shared = StartRouter()
 	
 	private init() {}
