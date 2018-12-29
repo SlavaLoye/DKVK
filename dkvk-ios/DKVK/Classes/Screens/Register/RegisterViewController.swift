@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ARSLineProgress
 
 class RegisterViewController: UIViewController {
     
@@ -15,6 +16,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
     
     //MARK: -  properties
+    
     
     private let models: [HeaderModel] = [.info, .sex, .birthday]
     private let sexModels: [Sex] = [.male, .female]
@@ -25,11 +27,11 @@ class RegisterViewController: UIViewController {
         return picker
     }()
     
-    //MARK: -  viewDidLoad()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         title = "Регистрация"
+        
         Decorator.decorate(vc: self)
         registerCells()
         delegating()
@@ -38,28 +40,27 @@ class RegisterViewController: UIViewController {
         updateDoneButtonStatus()
     }
     
-    //MARK: -  addRightBarButton()
-    
     private func addRightBarButton() {
         let barButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(rightBarButtonClicked(sender:)))
         navigationItem.rightBarButtonItem = barButton
     }
     
-    //MARK: -  updateDoneButtonStatus()
-    
     private func updateDoneButtonStatus() {
         navigationItem.rightBarButtonItem?.isEnabled = registerModel.isFilled
     }
     
-    //MARK: -  rightBarButtonClicked()
-    
     @objc private func rightBarButtonClicked(sender: UIBarButtonItem) {
-        AuthManager.shared.register(with: registerModel) {
-            self.showAlert(with: "Успешно", and: "Вы зарегистрированы!")
+        ARSLineProgress.show()
+        AuthManager.shared.register(with: registerModel) { result in
+            ARSLineProgress.hide()
+            switch result {
+            case .success(_):
+                self.showAlert(with: "Успешно", and: "Вы зарегистрированы!")
+            case .failure(let error):
+                self.showAlert(with: "Ошибка", and: error.localizedDescription)
+            }
         }
     }
-    
-    //MARK: -  configureDatePickerView()
     
     private func configureDatePickerView() {
         datePickerView.addTarget(self, action: #selector(datePickerChanged(sender:)), for: .valueChanged)
@@ -70,8 +71,6 @@ class RegisterViewController: UIViewController {
         registerModel.birthday = date
         updateDoneButtonStatus()
     }
-    
-    //MARK: -  delegating()
     
     private func delegating() {
         tableView.delegate = self
@@ -90,16 +89,12 @@ class RegisterViewController: UIViewController {
         present(imagePickerController, animated: true, completion: nil)
     }
     
-    //MARK: -  registerCells()
-    
     private func registerCells() {
         tableView.register(InfoUserTableViewCell.nib, forCellReuseIdentifier: InfoUserTableViewCell.name)
         tableView.register(SegmenterTableViewCell.nib, forCellReuseIdentifier: SegmenterTableViewCell.name)
         tableView.register(TextFieldTableViewCell.nib, forCellReuseIdentifier: TextFieldTableViewCell.name)
     }
 }
-
-//MARK: -  extension RegisterViewController(UINavigationControllerDelegate)
 
 extension RegisterViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -111,10 +106,12 @@ extension RegisterViewController: UINavigationControllerDelegate, UIImagePickerC
         registerModel.photo = image
         updateDoneButtonStatus()
         tableView.reloadData()
+        ARSLineProgress.show()
+        StorageManager.shared.upload(photo: image, by: registerModel) {
+            ARSLineProgress.hide()
+        }
     }
 }
-
-//MARK: -  extension RegisterViewController(CellModel)
 
 extension RegisterViewController {
     fileprivate enum CellModel {
@@ -139,8 +136,6 @@ extension RegisterViewController {
     }
 }
 
-//MARK: -  extension RegisterViewController(Decorator)
-
 extension RegisterViewController {
     private static let tableViewTopInset: CGFloat = 16
     fileprivate class Decorator {
@@ -154,8 +149,6 @@ extension RegisterViewController {
     }
 }
 
-//MARK: -  extension RegisterViewController(UITableViewDelegate)
-
 extension RegisterViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let model = models[indexPath.section].cellModels[indexPath.row]
@@ -167,8 +160,6 @@ extension RegisterViewController: UITableViewDelegate {
         }
     }
 }
-
-//MARK: -  extension RegisterViewController(UITableViewDataSource)
 
 extension RegisterViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
