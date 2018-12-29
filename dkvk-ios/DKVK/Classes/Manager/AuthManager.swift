@@ -12,7 +12,9 @@ import FirebaseStorage
 import FirebaseAuth
 
 class AuthManager {
+    
     var currentUser: User?
+    
     static let shared = AuthManager()
     private init() {}
     
@@ -25,7 +27,7 @@ class AuthManager {
     }
     
     private let auth = Auth.auth()
-    
+    // авторизация
     func signIn(with email: String, and password: String, completion: @escaping ItemClosure<AuthResult>) {
         auth.signIn(withEmail: email, password: password) { (result, error) in
             if let error = error {
@@ -83,7 +85,7 @@ class AuthManager {
             guard let url = url else {
                 return
             }
-            
+            // Firebase не знает NSurl поэтому пишем absoluteString
             self.usersRef.child(model.userId).child("avatarUrl").setValue(url.absoluteString)
         }
     }

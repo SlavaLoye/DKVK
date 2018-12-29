@@ -36,7 +36,7 @@ class ViewController: UIViewController {
     }
     
     @objc private func signinButtonClicked() {
-        
+        StartRouter.shared.goToLoginScreen(from: self)
     }
     
     @objc private func signUpButtonClicked() {
