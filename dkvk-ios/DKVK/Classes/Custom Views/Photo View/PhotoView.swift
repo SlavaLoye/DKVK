@@ -14,7 +14,7 @@ final class PhotoView: UIView {
 	private let label = UILabel()
 	private let imageView = UIImageView()
 	
-	var clicked: VoidClosure?
+	var clicked: VoidClosure?  
 	
 	override func didMoveToSuperview() {
 		super.didMoveToSuperview()

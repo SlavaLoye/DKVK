@@ -10,7 +10,7 @@ import UIKit
 
 class TextFieldTableViewCell: UITableViewCell, NibLoadable {
 	
-	@IBOutlet weak var textField: UITextField!
+	@IBOutlet  weak var textField: UITextField!
 	
 	var textChanged: ItemClosure<String>?
 	
@@ -26,5 +26,4 @@ class TextFieldTableViewCell: UITableViewCell, NibLoadable {
 	@objc private func textFieldChanged(sender: UITextField) {
 		textChanged?(sender.text ?? "")
 	}
-	
 }

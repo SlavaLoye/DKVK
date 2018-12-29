@@ -31,7 +31,6 @@ class InfoUserTableViewCell: UITableViewCell, StaticCellProtocol {
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		// Initialization code
-		
 		Decorator.decorate(cell: self)
 		addTargets()
 	}
