@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="UserHeaderView" customModule="DKVK" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TXu-hI-w5T">
+                    <rect key="frame" x="8" y="8" width="28" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="TXu-hI-w5T" secondAttribute="height" multiplier="1:1" id="ndz-qg-6Ki"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Piter Parker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCN-fS-uXh">
+                    <rect key="frame" x="44" y="8" width="323" height="28"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                    <color key="textColor" name="blueColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="TXu-hI-w5T" secondAttribute="bottom" constant="8" id="EwI-uv-1Zr"/>
+                <constraint firstItem="mCN-fS-uXh" firstAttribute="leading" secondItem="TXu-hI-w5T" secondAttribute="trailing" constant="8" id="Gw4-PL-XXK"/>
+                <constraint firstItem="mCN-fS-uXh" firstAttribute="bottom" secondItem="TXu-hI-w5T" secondAttribute="bottom" id="RA1-RM-9xB"/>
+                <constraint firstItem="TXu-hI-w5T" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="cUo-ha-Hbn"/>
+                <constraint firstItem="mCN-fS-uXh" firstAttribute="top" secondItem="TXu-hI-w5T" secondAttribute="top" id="csU-sp-LsX"/>
+                <constraint firstItem="TXu-hI-w5T" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="pJz-pa-2F1"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="mCN-fS-uXh" secondAttribute="trailing" constant="8" id="sDt-XA-mHX"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="avatarView" destination="TXu-hI-w5T" id="i1a-MI-X1S"/>
+                <outlet property="usernameLabel" destination="mCN-fS-uXh" id="lzG-9n-mX4"/>
+            </connections>
+            <point key="canvasLocation" x="53.600000000000001" y="48.575712143928037"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="blueColor">
+            <color red="0.29803921568627451" green="0.45882352941176469" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

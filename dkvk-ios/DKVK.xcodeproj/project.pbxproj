@@ -14,6 +14,10 @@
 		6CF8ADD821D80BEB00CD0064 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF8ADD621D80BEB00CD0064 /* LoginViewController.swift */; };
 		6CF8ADD921D80BEB00CD0064 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CF8ADD721D80BEB00CD0064 /* LoginViewController.xib */; };
 		6CF8ADDC21D80E0600CD0064 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF8ADDB21D80E0600CD0064 /* TextField.swift */; };
+		6CF8ADE021D815C400CD0064 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF8ADDE21D815C400CD0064 /* FeedViewController.swift */; };
+		6CF8ADE121D815C400CD0064 /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CF8ADDF21D815C400CD0064 /* FeedViewController.xib */; };
+		6CF8ADE621D8173000CD0064 /* UserHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CF8ADE521D8173000CD0064 /* UserHeaderView.xib */; };
+		6CF8ADE821D8186900CD0064 /* UserHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF8ADE721D8186900CD0064 /* UserHeaderView.swift */; };
 		6CFDC8B421D3C2C300232DBD /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFDC8B321D3C2C300232DBD /* Typealiases.swift */; };
 		6CFDC8B621D3C45000232DBD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6CFDC8B521D3C45000232DBD /* GoogleService-Info.plist */; };
 		7C61EA3321C6BECD00D1BA6A /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C61EA3221C6BECD00D1BA6A /* RegisterModel.swift */; };
@@ -70,6 +74,10 @@
 		6CF8ADD621D80BEB00CD0064 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6CF8ADD721D80BEB00CD0064 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		6CF8ADDB21D80E0600CD0064 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		6CF8ADDE21D815C400CD0064 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		6CF8ADDF21D815C400CD0064 /* FeedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
+		6CF8ADE521D8173000CD0064 /* UserHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserHeaderView.xib; sourceTree = "<group>"; };
+		6CF8ADE721D8186900CD0064 /* UserHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeaderView.swift; sourceTree = "<group>"; };
 		6CFDC8B321D3C2C300232DBD /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
 		6CFDC8B521D3C45000232DBD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7C61EA3221C6BECD00D1BA6A /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
@@ -152,6 +160,24 @@
 				6CF8ADDB21D80E0600CD0064 /* TextField.swift */,
 			);
 			path = "Text Fields";
+			sourceTree = "<group>";
+		};
+		6CF8ADDD21D8155A00CD0064 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				6CF8ADDE21D815C400CD0064 /* FeedViewController.swift */,
+				6CF8ADDF21D815C400CD0064 /* FeedViewController.xib */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		6CF8ADE221D816E800CD0064 /* User Header */ = {
+			isa = PBXGroup;
+			children = (
+				6CF8ADE721D8186900CD0064 /* UserHeaderView.swift */,
+				6CF8ADE521D8173000CD0064 /* UserHeaderView.xib */,
+			);
+			path = "User Header";
 			sourceTree = "<group>";
 		};
 		7C61EA3121C6BEBD00D1BA6A /* Models */ = {
@@ -259,6 +285,7 @@
 		7CAAAD2721B44D9100FBF963 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				6CF8ADDD21D8155A00CD0064 /* Feed */,
 				6CF8ADD521D80BB800CD0064 /* Login */,
 				7CAAAD2D21B4544B00FBF963 /* Register */,
 				7CAAAD2621B44D8A00FBF963 /* Start */,
@@ -287,6 +314,7 @@
 		7CAAAD3221B454D900FBF963 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				6CF8ADE221D816E800CD0064 /* User Header */,
 				6CF8ADDA21D80DD700CD0064 /* Text Fields */,
 				7CE1582E21BED7F8005449E5 /* Header TItle View */,
 				7CAAAD4021B4599300FBF963 /* Cells */,
@@ -477,12 +505,14 @@
 				7CAAAD4421B459D700FBF963 /* InfoUserTableViewCell.xib in Resources */,
 				6CF8ADD921D80BEB00CD0064 /* LoginViewController.xib in Resources */,
 				7CE1583221BED814005449E5 /* HeaderTitleView.xib in Resources */,
+				6CF8ADE621D8173000CD0064 /* UserHeaderView.xib in Resources */,
 				7CAAAD0D21B44BD900FBF963 /* LaunchScreen.storyboard in Resources */,
 				7CAAAD2321B44C3F00FBF963 /* ViewController.xib in Resources */,
 				7CAAAD0A21B44BD900FBF963 /* Assets.xcassets in Resources */,
 				7CAAAD3121B4545F00FBF963 /* RegisterViewController.xib in Resources */,
 				6CFDC8B621D3C45000232DBD /* GoogleService-Info.plist in Resources */,
 				7CF5607421BEE55B00A39099 /* TextFieldTableViewCell.xib in Resources */,
+				6CF8ADE121D815C400CD0064 /* FeedViewController.xib in Resources */,
 				7CF5606E21BEE1A300A39099 /* TextTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -552,6 +582,7 @@
 				7CF5607321BEE55B00A39099 /* TextFieldTableViewCell.swift in Sources */,
 				7C61EA3A21C6C7C300D1BA6A /* AuthManager.swift in Sources */,
 				6CF8ADDC21D80E0600CD0064 /* TextField.swift in Sources */,
+				6CF8ADE821D8186900CD0064 /* UserHeaderView.swift in Sources */,
 				7CE1583421BED940005449E5 /* CellHeaderProtocol.swift in Sources */,
 				7CAAAD3F21B4583B00FBF963 /* Extensions+NSLayoutConstraint.swift in Sources */,
 				7C9937D621C6C99A0063AD5B /* Utilites.swift in Sources */,
@@ -566,6 +597,7 @@
 				7CAAAD4921B45D0000FBF963 /* HeightContainable.swift in Sources */,
 				7CAAAD3521B4552400FBF963 /* PhotoView.swift in Sources */,
 				7C61EA3721C6C06100D1BA6A /* Extensions+UIViewController.swift in Sources */,
+				6CF8ADE021D815C400CD0064 /* FeedViewController.swift in Sources */,
 				7CF5606D21BEE1A300A39099 /* TextTableViewCell.swift in Sources */,
 				6CF8ADD021D7C59900CD0064 /* Validator.swift in Sources */,
 				7CF5606921BEDD6A00A39099 /* SegmenterTableViewCell.swift in Sources */,
