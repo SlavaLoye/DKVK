@@ -6,7 +6,7 @@
 //  Copyright © 2018 Hadevs. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 /// better use own that alamofire one
 enum Result<Value> {
@@ -19,6 +19,8 @@ enum CustomErrors {
     case invalidEmail
     case unknownError
     case serverError
+    case keychainError
+    case biometricAuthError(String)
 }
 
 extension CustomErrors: LocalizedError {
@@ -33,8 +35,12 @@ extension CustomErrors: LocalizedError {
             return NSLocalizedString("server_error", comment: "")
         case .serverError:
             return NSLocalizedString("server_error", comment: "")
+        case .keychainError:
+            /// generally, user shouldn't know about this error
+            /// because it is secure storage
+            return NSLocalizedString("keychain_error", comment: "")
+        case .biometricAuthError(let error):
+            return error
         }
     }
 }
-
-

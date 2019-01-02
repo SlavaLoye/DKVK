@@ -28,20 +28,20 @@ class AuthManager {
     
     private let auth = Auth.auth()
     // авторизация
-    func signIn(with email: String, and password: String, completion: @escaping ItemClosure<AuthResult>) {
+    func signIn(with email: String, and password: String, completion: @escaping ItemClosure<FirebaseResult>) {
         auth.signIn(withEmail: email, password: password) { (result, error) in
             if let error = error {
-                completion(AuthResult.error(error.localizedDescription))
+                completion(FirebaseResult.error(error.localizedDescription))
                 return
             }
             
             guard let user = result?.user else {
-                completion(AuthResult.error("User not exist"))
+                completion(FirebaseResult.error("User not exist"))
                 return
             }
             
             self.currentUser = user
-            completion(AuthResult.success)
+            completion(FirebaseResult.success)
         }
     }
     
