@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6CCBE6E821E8F86200B134FB /* CreatePosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCBE6E621E8F86200B134FB /* CreatePosViewController.swift */; };
+		6CCBE6E921E8F86200B134FB /* CreatePosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CCBE6E721E8F86200B134FB /* CreatePosViewController.xib */; };
 		6CF7C50621DCC22D009F150A /* BiometricAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF7C50521DCC22D009F150A /* BiometricAuthManager.swift */; };
 		6CF7C50821DCC261009F150A /* SecureStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF7C50721DCC261009F150A /* SecureStorageManager.swift */; };
 		6CF7C50A21DCC27A009F150A /* PostManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF7C50921DCC27A009F150A /* PostManager.swift */; };
@@ -78,6 +80,8 @@
 /* Begin PBXFileReference section */
 		22BBCB95EDE0DA29835604C1 /* Pods_DKVK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DKVK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54341E1F00487674AA461E73 /* Pods-DKVK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DKVK.release.xcconfig"; path = "Pods/Target Support Files/Pods-DKVK/Pods-DKVK.release.xcconfig"; sourceTree = "<group>"; };
+		6CCBE6E621E8F86200B134FB /* CreatePosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePosViewController.swift; sourceTree = "<group>"; };
+		6CCBE6E721E8F86200B134FB /* CreatePosViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreatePosViewController.xib; sourceTree = "<group>"; };
 		6CF7C50521DCC22D009F150A /* BiometricAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthManager.swift; sourceTree = "<group>"; };
 		6CF7C50721DCC261009F150A /* SecureStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStorageManager.swift; sourceTree = "<group>"; };
 		6CF7C50921DCC27A009F150A /* PostManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostManager.swift; sourceTree = "<group>"; };
@@ -167,6 +171,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6CCBE6E421E8F7F900B134FB /* Chats */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Chats;
+			sourceTree = "<group>";
+		};
+		6CCBE6E521E8F83F00B134FB /* CreatePos */ = {
+			isa = PBXGroup;
+			children = (
+				6CCBE6E621E8F86200B134FB /* CreatePosViewController.swift */,
+				6CCBE6E721E8F86200B134FB /* CreatePosViewController.xib */,
+			);
+			name = CreatePos;
+			sourceTree = "<group>";
+		};
 		6CF7C50F21DCC747009F150A /* Post */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,13 +196,13 @@
 			path = Post;
 			sourceTree = "<group>";
 		};
-		6CF7C51421DCCA43009F150A /* CreatePost */ = {
+		6CF7C51421DCCA43009F150A /* Chat */ = {
 			isa = PBXGroup;
 			children = (
 				6CF7C51521DCCA66009F150A /* CreatePostViewController.swift */,
 				6CF7C51621DCCA66009F150A /* CreatePostViewController.xib */,
 			);
-			path = CreatePost;
+			path = Chat;
 			sourceTree = "<group>";
 		};
 		6CF8ADD521D80BB800CD0064 /* Login */ = {
@@ -330,7 +350,9 @@
 		7CAAAD2721B44D9100FBF963 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				6CF7C51421DCCA43009F150A /* CreatePost */,
+				6CCBE6E521E8F83F00B134FB /* CreatePos */,
+				6CCBE6E421E8F7F900B134FB /* Chats */,
+				6CF7C51421DCCA43009F150A /* Chat */,
 				6CF8ADDD21D8155A00CD0064 /* Feed */,
 				6CF8ADD521D80BB800CD0064 /* Login */,
 				7CAAAD2D21B4544B00FBF963 /* Register */,
@@ -551,6 +573,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CF5606A21BEDD6A00A39099 /* SegmenterTableViewCell.xib in Resources */,
+				6CCBE6E921E8F86200B134FB /* CreatePosViewController.xib in Resources */,
 				7CAAAD4421B459D700FBF963 /* InfoUserTableViewCell.xib in Resources */,
 				6CF8ADD921D80BEB00CD0064 /* LoginViewController.xib in Resources */,
 				7CE1583221BED814005449E5 /* HeaderTitleView.xib in Resources */,
@@ -652,6 +675,7 @@
 				7C61EA3321C6BECD00D1BA6A /* RegisterModel.swift in Sources */,
 				7CE1583021BED80D005449E5 /* HeaderTitleView.swift in Sources */,
 				6CFC02F821DD483A008577CE /* Extensions+Decodable.swift in Sources */,
+				6CCBE6E821E8F86200B134FB /* CreatePosViewController.swift in Sources */,
 				6CF7C50621DCC22D009F150A /* BiometricAuthManager.swift in Sources */,
 				7CAAAD4921B45D0000FBF963 /* HeightContainable.swift in Sources */,
 				7CAAAD3521B4552400FBF963 /* PhotoView.swift in Sources */,
