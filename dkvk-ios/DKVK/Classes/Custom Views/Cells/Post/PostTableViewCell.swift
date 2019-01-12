@@ -11,14 +11,19 @@ import UIKit
 
 class PostTableViewCell: UITableViewCell, NibLoadable {
     
+     //MARK: - IBOutlet
+    
     @IBOutlet private weak var textView: UITextView!
     @IBOutlet private weak var postImageView: UIImageView!
     @IBOutlet private weak var imageViewHeightConstraint: NSLayoutConstraint!
     
+    //MARK: - awakeFromNib()
     override func awakeFromNib() {
         super.awakeFromNib()
     }
 }
+
+    //MARK: - extension PostTableViewCell (setup)
 
 extension PostTableViewCell {
     func setup(with post: Post) {
@@ -31,6 +36,9 @@ extension PostTableViewCell {
         }
     }
 }
+
+
+    //MARK: - extension PostTableViewCell (Sizes)
 
 private extension PostTableViewCell {
     enum Sizes {

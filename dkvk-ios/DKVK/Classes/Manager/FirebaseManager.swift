@@ -9,6 +9,8 @@
 import Foundation
 import FirebaseDatabase
 
+//MARK: - FirebaseManager
+
 class FirebaseManager {
     var sourceRef: DatabaseReference {
         return Database.database().reference()

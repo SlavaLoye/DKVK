@@ -11,9 +11,13 @@ import Firebase
 
 final class PostManager: FirebaseManager {
     
-    private override init() {}
+    //MARK: - properties
     
     static let shared = PostManager()
+    
+    private override init() {}
+    
+    //MARK: - createPost
     
     func createPost(from user: User, with model: CreatePostModel, completion: @escaping ItemClosure<CreatedPostResult>) {
         guard model.isFilled else {
@@ -23,6 +27,7 @@ final class PostManager: FirebaseManager {
         createPost(from: user, with: model.text, image: model.image, completion: completion)
     }
     
+    //MARK: - createPost
     func createPost(from user: User, with text: String? = nil, image: UIImage? = nil, completion: @escaping ItemClosure<CreatedPostResult>) {
         if let text = text, text.isEmpty, image == nil {
             completion(.error("Can't create empty post"))
@@ -45,6 +50,8 @@ final class PostManager: FirebaseManager {
             completion(.success(post))
         }
     }
+    
+   //MARK: - loadingAllPosts
     
     func loadingAllPosts(completion: @escaping ItemClosure<LoadedPostsResult>) {
         usersRef.observe(.value) { (snapshot) in
@@ -69,6 +76,8 @@ final class PostManager: FirebaseManager {
         }
     }
 }
+
+//MARK: - extension PostManager
 
 extension PostManager {
     fileprivate enum Keys: String {

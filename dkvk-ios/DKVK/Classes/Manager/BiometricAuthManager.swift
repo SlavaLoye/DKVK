@@ -9,6 +9,8 @@
 import Foundation
 import LocalAuthentication
 
+//MARK: - enum BiometricType
+
 enum BiometricType {
     case none
     case touchID
@@ -16,8 +18,10 @@ enum BiometricType {
 }
 
 class BiometricAuthManager {
-    static let shared = BiometricAuthManager()
     
+    //MARK: - properties
+    
+    static let shared = BiometricAuthManager()
     let context = LAContext()
     let loginReason = "Logging in with Touch ID"
     

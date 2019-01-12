@@ -9,13 +9,17 @@
 import UIKit
 
 final class PhotoView: UIView {
+    
+    //MARK: - properties
+    
 	private let stackView = UIStackView()
 	private let plusView = UIImageView()
 	private let label = UILabel()
 	private let imageView = UIImageView()
-	
 	var clicked: VoidClosure?  
 	
+    //MARK: - didMoveToSuperview()
+    
 	override func didMoveToSuperview() {
 		super.didMoveToSuperview()
 		Decorator.decorate(self)
@@ -24,17 +28,23 @@ final class PhotoView: UIView {
 		addImageView()
 		clipsToBounds = true
 	}
-	
+    
+    //MARK: - touchesEnded()
+    
 	override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
 		super.touchesEnded(touches, with: event)
 		
 		clicked?()
 	}
-	
+    
+	//MARK: - set()
+    
 	func set(image: UIImage?) {
 		imageView.image = image
 		imageView.isHidden = image == nil
 	}
+    
+    //MARK: - addImageView()
 	
 	private func addImageView() {
 		imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -46,6 +56,8 @@ final class PhotoView: UIView {
 		let constraints = NSLayoutConstraint.contraints(withNewVisualFormat: "H:|[imageView]|,V:|[imageView]|", dict: ["imageView": imageView])
 		addConstraints(constraints)
 	}
+    
+    //MARK: - addLabel()
 	
 	private func addLabel() {
 		label.text = "фото"
@@ -58,6 +70,8 @@ final class PhotoView: UIView {
 		let constraints = NSLayoutConstraint.contraints(withNewVisualFormat: "H:|[label]|,V:[label]-16-|", dict: ["label": label])
 		addConstraints(constraints)
 	}
+    
+    //MARK: - addPlusView()
 	
 	private func addPlusView() {
 		plusView.translatesAutoresizingMaskIntoConstraints = false
@@ -69,6 +83,8 @@ final class PhotoView: UIView {
 		let constraints = NSLayoutConstraint.contraints(withNewVisualFormat: "H:|[plusView]|,V:|-(>=0)-[plusView(\(frame.height * 0.3))][label]", dict: ["label": label, "plusView": plusView])
 		addConstraints(constraints)
 	}
+    
+    //MARK: - layoutSubviews()
 	
 	override func layoutSubviews() {
 		super.layoutSubviews()
@@ -77,6 +93,7 @@ final class PhotoView: UIView {
 	}
 }
 
+    //MARK: - extension PhotoView(Decorator)
 
 extension PhotoView {
 	fileprivate final class Decorator {

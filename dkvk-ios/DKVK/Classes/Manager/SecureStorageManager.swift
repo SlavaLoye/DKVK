@@ -11,12 +11,16 @@ import Foundation
 import Locksmith
 
 final class SecureStorageManager {
+
+    //MARK: - properties
+    
     static let shared = SecureStorageManager()
     
     let myUserAccountIdentifier = "MyUserAccountIdentifier"
     
     private init() {}
     
+    //MARK: -  func save
     func save(email: String?, password: String?, completionHandler: ItemClosure<CustomErrors?>) {
         guard let email = email, let password = password else {
             completionHandler(CustomErrors.keychainError)
@@ -33,6 +37,8 @@ final class SecureStorageManager {
         }
     }
     
+    //MARK: -  eraseUserDataIfNeeded
+    
     func eraseUserDataIfNeeded() {
         guard isLoggedIn() else {
             return
@@ -41,6 +47,8 @@ final class SecureStorageManager {
         try? Locksmith.deleteDataForUserAccount(userAccount: myUserAccountIdentifier)
     }
     
+    //MARK: -  loadEmailAndPassword
+    
     func loadEmailAndPassword() -> (email: String?, password: String?) {
         let dictionary = Locksmith.loadDataForUserAccount(userAccount: myUserAccountIdentifier)
         let email = dictionary?[Keys.email.rawValue] as? String ?? nil
@@ -48,11 +56,15 @@ final class SecureStorageManager {
         return (email: email, password: password)
     }
     
+    //MARK: -  isLoggedIn
+    
     func isLoggedIn() -> Bool {
         let credentials = loadEmailAndPassword()
         return credentials.email != nil && credentials.password != nil
     }
 }
+
+    //MARK: -  extension SecureStorageManager (enum Keys
 
 private extension SecureStorageManager {
     enum Keys: String {
