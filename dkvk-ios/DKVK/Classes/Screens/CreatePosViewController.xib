@@ -15,6 +15,7 @@
             <connections>
                 <outlet property="crossImageView" destination="jhw-lB-bKy" id="HcP-6F-JLr"/>
                 <outlet property="doneButton" destination="itM-zN-3IN" id="gdO-QT-hBa"/>
+                <outlet property="postImageView" destination="TVV-YW-NFb" id="adz-LS-anA"/>
                 <outlet property="textView" destination="tnn-xv-xeZ" id="Ulc-rb-yfx"/>
                 <outlet property="view" destination="V0W-Jh-ae8" id="lDb-CK-g3f"/>
             </connections>
