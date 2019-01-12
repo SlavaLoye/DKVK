@@ -11,7 +11,14 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreatePosViewController" customModule="DKVK" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreatePostViewController" customModule="DKVK" customModuleProvider="target">
+            <connections>
+                <outlet property="crossImageView" destination="jhw-lB-bKy" id="HcP-6F-JLr"/>
+                <outlet property="doneButton" destination="itM-zN-3IN" id="gdO-QT-hBa"/>
+                <outlet property="textView" destination="tnn-xv-xeZ" id="Ulc-rb-yfx"/>
+                <outlet property="view" destination="V0W-Jh-ae8" id="lDb-CK-g3f"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="V0W-Jh-ae8">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>

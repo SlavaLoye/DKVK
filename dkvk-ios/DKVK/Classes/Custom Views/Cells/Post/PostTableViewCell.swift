@@ -11,11 +11,30 @@ import UIKit
 
 class PostTableViewCell: UITableViewCell, NibLoadable {
     
-    @IBOutlet weak var textView: UITextView!
+    @IBOutlet private weak var textView: UITextView!
+    @IBOutlet private weak var postImageView: UIImageView!
+    @IBOutlet private weak var imageViewHeightConstraint: NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-    
+}
+
+extension PostTableViewCell {
+    func setup(with post: Post) {
+        textView.text = post.text ?? ""
+        if let imageData = post.imageData {
+            postImageView.image = UIImage(data: imageData)
+            imageViewHeightConstraint.constant = Sizes.postImageHeight
+        } else {
+            imageViewHeightConstraint.constant = Sizes.zero
+        }
+    }
+}
+
+private extension PostTableViewCell {
+    enum Sizes {
+        static let zero: CGFloat = 0
+        static let postImageHeight: CGFloat = 300
+    }
 }

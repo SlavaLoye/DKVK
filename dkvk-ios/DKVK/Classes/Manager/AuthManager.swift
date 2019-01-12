@@ -11,24 +11,27 @@ import FirebaseDatabase
 import FirebaseStorage
 import FirebaseAuth
 
-class AuthManager {
-    
+class AuthManager: FirebaseManager {
     var currentUser: User?
-    
     static let shared = AuthManager()
-    private init() {}
-    
-    private var sourceRef: DatabaseReference {
-        return Database.database().reference()
-    }
-    
-    private var usersRef: DatabaseReference {
-        return sourceRef.child("users")
-    }
     
     private let auth = Auth.auth()
-    // авторизация
-    func signIn(with email: String, and password: String, completion: @escaping ItemClosure<FirebaseResult>) {
+    
+    func signInIfNeeded(completion: ItemClosure<FirebaseResult>? = nil) {
+        let credentials = SecureStorageManager.shared.loadEmailAndPassword()
+        
+        guard let email = credentials.email, let password = credentials.password else {
+            return
+        }
+        
+        signIn(with: email, and: password, completion: completion ?? {_ in})
+    }
+    
+    func signIn(with email: String?, and password: String?, completion: @escaping ItemClosure<FirebaseResult>) {
+        guard let email = email, let password = password else {
+            completion(FirebaseResult.error("Something wrong with email or password. Please try again"))
+            return
+        }
         auth.signIn(withEmail: email, password: password) { (result, error) in
             if let error = error {
                 completion(FirebaseResult.error(error.localizedDescription))
@@ -65,56 +68,32 @@ class AuthManager {
         auth.createUser(withEmail: email, password: password) { (result, error) in
             if let error = error {
                 completion(.failure(error))
-            } else if let _ = result {
-                // TODO: use result if need
-                var dict = model.dict
-                dict["id"] = id
-                    // подгружаем фотку опять для того что бы она успела загрузиться в UI и на бэкенд (есть решение блокиратор остановить UI)
-                self.usersRef.child(id).setValue(dict, withCompletionBlock: { (error, reference) in
-                    self.addAvatarUrlIfNeeded(for: model)
-                    completion(.success(()))
-                })
-            } else {
-                completion(.failure(CustomErrors.unknownError))
+                return
             }
+            
+            guard let res = result else {
+                completion(.failure(CustomErrors.unknownError))
+                return
+            }
+            // обязательно проверить
+            self.currentUser = res.user
+            // TODO: use result if need
+            var dict = model.dict
+            dict["id"] = id
+            self.usersRef.child(res.user.uid).setValue(dict, withCompletionBlock: { (error, reference) in
+                self.addAvatarUrlIfNeeded(for: model, user: res.user)
+                completion(.success(()))
+            })
         }
     }
     
-    func addAvatarUrlIfNeeded(for model: RegisterModel) {
+    func addAvatarUrlIfNeeded(for model: RegisterModel, user: User) {
         StorageManager.shared.loadAvatarUrl(for: model) { (url) in
             guard let url = url else {
                 return
             }
-            // Firebase не знает NSurl поэтому пишем absoluteString
-            self.usersRef.child(model.userId).child("avatarUrl").setValue(url.absoluteString)
+            
+            self.usersRef.child(user.uid).child("avatarUrl").setValue(url.absoluteString)
         }
     }
 }
-
-//class AuthManager {
-//    static let shared = AuthManager()
-//    private init() {}
-//
-//    private var sourceRef: DatabaseReference {
-//        return Database.database().reference()
-//    }
-//
-//    private let auth = Auth.auth()
-//
-//    func register(with model: RegisterModel, completion: VoidClosure) {
-//        guard model.isFilled else {
-//            return
-//        }
-//        guard let email = model.email, let password = model.password else {
-//            return
-//        }
-//
-//        let usersRef = sourceRef.child("users")
-//        let id = UUID.init().uuidString
-//        auth.createUser(withEmail: email, password: password) { (result, error) in
-//            var dict = model.dict
-//            dict["id"] = id
-//            usersRef.child(id).setValue(dict)
-//        }
-//    }
-//}

@@ -2,8 +2,8 @@
 //  CustomErrors.swift
 //  DKVK
 //
-//  Created by Вячеслав Лойе on 29/12/2018.
-//  Copyright © 2018 Hadevs. All rights reserved.
+//  Created by Вячеслав Лойе on 11/01/2019.
+//  Copyright © 2019 Hadevs. All rights reserved.
 //
 
 import Foundation
@@ -44,3 +44,4 @@ extension CustomErrors: LocalizedError {
         }
     }
 }
+

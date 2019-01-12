@@ -10,7 +10,6 @@ import UIKit
 import FirebaseStorage
 
 class StorageManager {
-    
     static let shared = StorageManager()
     
     private init() {}
@@ -22,8 +21,6 @@ class StorageManager {
             return
         }
         sourceRef.child(Keys.avatars.rawValue).child(model.userId).putData(data, metadata: nil) { (metadata, error) in
-            // подгружаем фотку опять для того что бы она успела загрузиться в UI и на бэкенд (есть решение остановить UI)
-            AuthManager.shared.addAvatarUrlIfNeeded(for: model)
             closure?()
         }
     }
