@@ -10,6 +10,7 @@
 import UIKit
 
 final class CreatePostModel {
+    
     private(set) var text: String?
     private(set) var image: UIImage?
     

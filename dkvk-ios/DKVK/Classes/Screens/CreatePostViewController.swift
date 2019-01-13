@@ -1,13 +1,12 @@
 //
-//  CreatePosViewController.swift
+//  CreatePostViewController.swift
 //  DKVK
 //
-//  Created by Вячеслав Лойе on 11/01/2019.
+//  Created by Вячеслав Лойе on 13/01/2019.
 //  Copyright © 2019 Hadevs. All rights reserved.
 //
 
 import UIKit
-
 
 final class CreatePostViewController: UIViewController {
     @IBOutlet private weak var textView: UITextView!

@@ -10,6 +10,7 @@ import UIKit
 
 
 class RegisterModel {
+    
     var photo: UIImage?
     var email: String?
     var password: String?

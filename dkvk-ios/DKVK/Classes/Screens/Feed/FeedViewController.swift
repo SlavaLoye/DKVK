@@ -10,12 +10,20 @@
 import UIKit
 
 class FeedViewController: UIViewController {
+    
+    //MARK: -  IBOutlet()
+    
     @IBOutlet private weak var tableView: UITableView!
+    
+    //MARK: - properties
+    
     private var posts: [Post] = [] {
         didSet {
             tableView.reloadData()
         }
     }
+    
+    //MARK: - viewDidLoad()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,15 +41,21 @@ class FeedViewController: UIViewController {
         }
     }
     
+    //MARK: - delegating()
+    
     private func delegating() {
         tableView.delegate = self
         tableView.dataSource = self
     }
     
+    //MARK: - registerCells()
+    
     private func registerCells() {
         tableView.register(PostTableViewCell.nib, forCellReuseIdentifier: PostTableViewCell.name)
     }
 }
+
+    //MARK: - extension FeedViewController(UITableViewDelegate)
 
 extension FeedViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -52,6 +66,8 @@ extension FeedViewController: UITableViewDelegate {
         return 350
     }
 }
+
+    //MARK: - extension FeedViewController(UITableViewDataSource)
 
 extension FeedViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

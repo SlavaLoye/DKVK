@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6CBBFA2221EA7FA500DE78FD /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBBFA2121EA7FA500DE78FD /* UserManager.swift */; };
-		6CCBE6E821E8F86200B134FB /* CreatePosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCBE6E621E8F86200B134FB /* CreatePosViewController.swift */; };
-		6CCBE6E921E8F86200B134FB /* CreatePosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CCBE6E721E8F86200B134FB /* CreatePosViewController.xib */; };
 		6CCBE6EC21E8F9BF00B134FB /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCBE6EA21E8F9BF00B134FB /* ChatsViewController.swift */; };
 		6CCBE6ED21E8F9BF00B134FB /* ChatsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CCBE6EB21E8F9BF00B134FB /* ChatsViewController.xib */; };
 		6CCBE6F021E907C000B134FB /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCBE6EE21E907C000B134FB /* ChatViewController.swift */; };
@@ -36,6 +34,8 @@
 		6CF8ADE121D815C400CD0064 /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CF8ADDF21D815C400CD0064 /* FeedViewController.xib */; };
 		6CF8ADE621D8173000CD0064 /* UserHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CF8ADE521D8173000CD0064 /* UserHeaderView.xib */; };
 		6CF8ADE821D8186900CD0064 /* UserHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF8ADE721D8186900CD0064 /* UserHeaderView.swift */; };
+		6CF9CAB521EB7EF200936690 /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF9CAB321EB7EF200936690 /* CreatePostViewController.swift */; };
+		6CF9CAB621EB7EF200936690 /* CreatePostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CF9CAB421EB7EF200936690 /* CreatePostViewController.xib */; };
 		6CFC02F821DD483A008577CE /* Extensions+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFC02F721DD483A008577CE /* Extensions+Decodable.swift */; };
 		6CFC02FA21DD4858008577CE /* Extensions+Encodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFC02F921DD4858008577CE /* Extensions+Encodable.swift */; };
 		6CFDC8B421D3C2C300232DBD /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CFDC8B321D3C2C300232DBD /* Typealiases.swift */; };
@@ -88,8 +88,6 @@
 		22BBCB95EDE0DA29835604C1 /* Pods_DKVK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DKVK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		54341E1F00487674AA461E73 /* Pods-DKVK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DKVK.release.xcconfig"; path = "Pods/Target Support Files/Pods-DKVK/Pods-DKVK.release.xcconfig"; sourceTree = "<group>"; };
 		6CBBFA2121EA7FA500DE78FD /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
-		6CCBE6E621E8F86200B134FB /* CreatePosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePosViewController.swift; sourceTree = "<group>"; };
-		6CCBE6E721E8F86200B134FB /* CreatePosViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreatePosViewController.xib; sourceTree = "<group>"; };
 		6CCBE6EA21E8F9BF00B134FB /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
 		6CCBE6EB21E8F9BF00B134FB /* ChatsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatsViewController.xib; sourceTree = "<group>"; };
 		6CCBE6EE21E907C000B134FB /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +114,8 @@
 		6CF8ADDF21D815C400CD0064 /* FeedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
 		6CF8ADE521D8173000CD0064 /* UserHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserHeaderView.xib; sourceTree = "<group>"; };
 		6CF8ADE721D8186900CD0064 /* UserHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHeaderView.swift; sourceTree = "<group>"; };
+		6CF9CAB321EB7EF200936690 /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
+		6CF9CAB421EB7EF200936690 /* CreatePostViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreatePostViewController.xib; sourceTree = "<group>"; };
 		6CFC02F721DD483A008577CE /* Extensions+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+Decodable.swift"; sourceTree = "<group>"; };
 		6CFC02F921DD4858008577CE /* Extensions+Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+Encodable.swift"; sourceTree = "<group>"; };
 		6CFDC8B321D3C2C300232DBD /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
@@ -197,8 +197,8 @@
 		6CCBE6E521E8F83F00B134FB /* CreatePos */ = {
 			isa = PBXGroup;
 			children = (
-				6CCBE6E621E8F86200B134FB /* CreatePosViewController.swift */,
-				6CCBE6E721E8F86200B134FB /* CreatePosViewController.xib */,
+				6CF9CAB321EB7EF200936690 /* CreatePostViewController.swift */,
+				6CF9CAB421EB7EF200936690 /* CreatePostViewController.xib */,
 			);
 			name = CreatePos;
 			sourceTree = "<group>";
@@ -594,13 +594,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CF5606A21BEDD6A00A39099 /* SegmenterTableViewCell.xib in Resources */,
-				6CCBE6E921E8F86200B134FB /* CreatePosViewController.xib in Resources */,
 				7CAAAD4421B459D700FBF963 /* InfoUserTableViewCell.xib in Resources */,
 				6CCBE6F121E907C000B134FB /* ChatViewController.xib in Resources */,
 				6CF8ADD921D80BEB00CD0064 /* LoginViewController.xib in Resources */,
 				7CE1583221BED814005449E5 /* HeaderTitleView.xib in Resources */,
 				6CF8ADE621D8173000CD0064 /* UserHeaderView.xib in Resources */,
 				7CAAAD0D21B44BD900FBF963 /* LaunchScreen.storyboard in Resources */,
+				6CF9CAB621EB7EF200936690 /* CreatePostViewController.xib in Resources */,
 				7CAAAD2321B44C3F00FBF963 /* ViewController.xib in Resources */,
 				7CAAAD0A21B44BD900FBF963 /* Assets.xcassets in Resources */,
 				7CAAAD3121B4545F00FBF963 /* RegisterViewController.xib in Resources */,
@@ -684,6 +684,7 @@
 				6CF8ADDC21D80E0600CD0064 /* TextField.swift in Sources */,
 				6CF8ADE821D8186900CD0064 /* UserHeaderView.swift in Sources */,
 				6CCBE6F021E907C000B134FB /* ChatViewController.swift in Sources */,
+				6CF9CAB521EB7EF200936690 /* CreatePostViewController.swift in Sources */,
 				7CE1583421BED940005449E5 /* CellHeaderProtocol.swift in Sources */,
 				7CAAAD3F21B4583B00FBF963 /* Extensions+NSLayoutConstraint.swift in Sources */,
 				7C9937D621C6C99A0063AD5B /* Utilites.swift in Sources */,
@@ -703,7 +704,6 @@
 				7CE1583021BED80D005449E5 /* HeaderTitleView.swift in Sources */,
 				6CCBE6F321E9082400B134FB /* CreatePostModel.swift in Sources */,
 				6CFC02F821DD483A008577CE /* Extensions+Decodable.swift in Sources */,
-				6CCBE6E821E8F86200B134FB /* CreatePosViewController.swift in Sources */,
 				6CF7C50621DCC22D009F150A /* BiometricAuthManager.swift in Sources */,
 				7CAAAD4921B45D0000FBF963 /* HeightContainable.swift in Sources */,
 				6CBBFA2221EA7FA500DE78FD /* UserManager.swift in Sources */,

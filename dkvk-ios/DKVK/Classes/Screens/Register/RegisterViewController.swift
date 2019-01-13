@@ -17,7 +17,6 @@ class RegisterViewController: UIViewController {
     
     //MARK: -  properties
     
-    
     private let models: [HeaderModel] = [.info, .sex, .birthday]
     private let sexModels: [Sex] = [.male, .female]
     private var registerModel = RegisterModel()
@@ -26,6 +25,8 @@ class RegisterViewController: UIViewController {
         picker.maximumDate = Date()
         return picker
     }()
+    
+    //MARK: -  viewDidLoad()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,10 +41,14 @@ class RegisterViewController: UIViewController {
         updateDoneButtonStatus()
     }
     
+    //MARK: -  addRightBarButton()
+    
     private func addRightBarButton() {
         let barButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(rightBarButtonClicked(sender:)))
         navigationItem.rightBarButtonItem = barButton
     }
+    
+    //MARK: -  updateDoneButtonStatus()
     
     private func updateDoneButtonStatus() {
         navigationItem.rightBarButtonItem?.isEnabled = registerModel.isFilled
@@ -62,9 +67,13 @@ class RegisterViewController: UIViewController {
         }
     }
     
+    //MARK: -  configureDatePickerView()
+
     private func configureDatePickerView() {
         datePickerView.addTarget(self, action: #selector(datePickerChanged(sender:)), for: .valueChanged)
     }
+    
+    //MARK: -  datePickerChanged()
     
     @objc private func datePickerChanged(sender: UIDatePicker) {
         let date = sender.date
@@ -72,15 +81,21 @@ class RegisterViewController: UIViewController {
         updateDoneButtonStatus()
     }
     
+    //MARK: -  delegating()
+    
     private func delegating() {
         tableView.delegate = self
         tableView.dataSource = self
     }
     
+    //MARK: -  viewWillAppear()
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
+    
+    //MARK: -  photoViewClicked()
     
     private func photoViewClicked() {
         let imagePickerController = UIImagePickerController()
@@ -88,6 +103,8 @@ class RegisterViewController: UIViewController {
         imagePickerController.sourceType = .photoLibrary
         present(imagePickerController, animated: true, completion: nil)
     }
+    
+    //MARK: -  registerCells()
     
     private func registerCells() {
         tableView.register(InfoUserTableViewCell.nib, forCellReuseIdentifier: InfoUserTableViewCell.name)
