@@ -16,8 +16,9 @@ class PostTableViewCell: UITableViewCell, NibLoadable {
     @IBOutlet private weak var textView: UITextView!
     @IBOutlet private weak var postImageView: UIImageView!
     @IBOutlet private weak var imageViewHeightConstraint: NSLayoutConstraint!
-//
+
     //MARK: - awakeFromNib()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -36,7 +37,6 @@ extension PostTableViewCell {
         }
     }
 }
-
 
     //MARK: - extension PostTableViewCell (Sizes)
 

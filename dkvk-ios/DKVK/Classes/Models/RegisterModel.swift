@@ -11,12 +11,16 @@ import UIKit
 
 class RegisterModel {
     
+    //MARK: - properties
+    
     var photo: UIImage?
     var email: String?
     var password: String?
     var sex: Sex = .male
     var birthday: Date?
     var userId: String
+    
+    //MARK: - isFilled - Bool
     
     var isFilled: Bool {
         guard !(email ?? "").isEmpty, !(password ?? "").isEmpty, birthday != nil else {
@@ -25,6 +29,9 @@ class RegisterModel {
         
         return true
     }
+    
+    
+     //MARK: - dict - [String: Any]
     
     var dict: [String: Any] {
         return [

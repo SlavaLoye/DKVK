@@ -9,6 +9,9 @@
 import UIKit
 
 class HeaderTitleView: UIView, NibLoadable {
+    
+    //MARK: -  IBOutlet
+    
 	@IBOutlet private weak var label: UILabel!
 	
 	func set(title: String) {

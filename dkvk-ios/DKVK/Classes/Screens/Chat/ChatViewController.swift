@@ -11,6 +11,8 @@ import UIKit
 
 class ChatViewController: UIViewController {
     
+     // MARK: - @IBOutlet
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -19,17 +21,24 @@ class ChatViewController: UIViewController {
         delegating()
     }
     
+    
+    // MARK: - delegating()
+    
     private func delegating() {
         tableView.delegate = self
         tableView.dataSource = self
     }
 }
 
+     // MARK: - extension ChatViewController: UITableViewDelegate()
+
 extension ChatViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 44
     }
 }
+
+    // MARK: - extension ChatViewController: UITableViewDataSource()
 
 extension ChatViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

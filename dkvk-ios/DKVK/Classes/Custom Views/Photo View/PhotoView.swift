@@ -33,7 +33,6 @@ final class PhotoView: UIView {
     
 	override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
 		super.touchesEnded(touches, with: event)
-		
 		clicked?()
 	}
     

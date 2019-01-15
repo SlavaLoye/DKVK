@@ -10,6 +10,9 @@ import Foundation
 import Firebase
 
 class Post: Codable {
+    
+    //MARK: - enum `Type`
+ 
     enum `Type`: String, Codable {
         case text
         case textAndImage

@@ -8,6 +8,8 @@
 
 import Foundation
 
+//MARK: - enum FirebaseResult
+
 enum FirebaseResult {
     case success
     case error(String)

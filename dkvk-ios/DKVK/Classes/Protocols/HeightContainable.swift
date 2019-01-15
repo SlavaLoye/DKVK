@@ -8,6 +8,8 @@
 
 import UIKit
 
+// MARK: - protocol HeightContainable 
+
 protocol HeightContainable {
 	static var height: CGFloat { get }
 }

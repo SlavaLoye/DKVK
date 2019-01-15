@@ -8,9 +8,13 @@
 //Typealiases.swift
 import UIKit
 
+    // MARK: - protocol NibLoadable
+
 protocol NibLoadable: class {
 	static var nib: UINib { get }
 }
+
+    // MARK: - extension NibLoadable
 
 extension NibLoadable {
 	static var nib: UINib {
@@ -21,6 +25,8 @@ extension NibLoadable {
 		return String(describing: self)
 	}
 }
+
+ // MARK: - extension NibLoadable where Self: UIView
 
 extension NibLoadable where Self: UIView {
 	static func loadFromNib() -> Self {

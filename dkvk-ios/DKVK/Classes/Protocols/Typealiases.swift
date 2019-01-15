@@ -8,6 +8,8 @@
 
 import Foundation
 
+// MARK: - typealias
+
 typealias StaticCellProtocol = NibLoadable & HeightContainable
 typealias ItemClosure<T> = ((T) -> Void)
 typealias OptionalItemClosure<T> = ((T?) -> Void)

@@ -10,12 +10,16 @@ import UIKit
 
 class ChatsViewController: UIViewController {
     
+    // MARK: - @IBOutlet()
+    
     @IBOutlet weak var tableView: UITableView!
     private var users: [DKUser] = [] {
         didSet {
             tableView.reloadData()
         }
     }
+    
+    // MARK: - @viewDidLoad()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,17 +31,23 @@ class ChatsViewController: UIViewController {
         }
     }
     
+    // MARK: - @delegating()
+    
     private func delegating() {
         tableView.delegate = self
         tableView.dataSource = self
     }
 }
 
+    //MARK: - @extension ChatsViewController: UITableViewDelegate()
+
 extension ChatsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 44
     }
 }
+
+    //MARK: - @extension ChatsViewController: UITableViewDataSource()
 
 extension ChatsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

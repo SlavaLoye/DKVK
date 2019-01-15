@@ -9,6 +9,8 @@
 import UIKit
 
 class SegmenterTableViewCell: UITableViewCell, NibLoadable {
+    
+    //MARK: -  @IBOutlet
 	
 	@IBOutlet private weak var segmentControl: UISegmentedControl!
 	
@@ -17,9 +19,10 @@ class SegmenterTableViewCell: UITableViewCell, NibLoadable {
 	override func awakeFromNib() {
 		super.awakeFromNib()
 		selectionStyle = .none
-		
 		addTargets()
 	}
+    
+    //MARK: -  set()
 	
 	func set(titles: [String]) {
 		segmentControl.removeAllSegments()
@@ -28,6 +31,8 @@ class SegmenterTableViewCell: UITableViewCell, NibLoadable {
 		}
 		segmentControl.selectedSegmentIndex = 0
 	}
+    
+    //MARK: -  addTargets()
 	
 	private func addTargets() {
 		segmentControl.addTarget(self, action: #selector(segmentControlChangedIndex(sender:)), for: .valueChanged)

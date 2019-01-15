@@ -8,6 +8,8 @@
 
 import Foundation
 
+//MARK: - enum Sex
+
 enum Sex: String {
 	case male
 	case female

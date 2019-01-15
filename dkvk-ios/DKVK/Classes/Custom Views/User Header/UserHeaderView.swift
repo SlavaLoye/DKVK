@@ -11,6 +11,8 @@ import Firebase
 
 final class UserHeaderView: UIView, NibLoadable {
     
+    //MARK: -  @IBOutlet
+    
     @IBOutlet private weak var avatarView: UIImageView!
     @IBOutlet private weak var usernameLabel: UILabel!
     
@@ -19,10 +21,14 @@ final class UserHeaderView: UIView, NibLoadable {
         super.awakeFromNib()
     }
     
+    //MARK: -  layoutSubviews()
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         avatarView.round()
     }
+    
+    //MARK: -  confingure()
     
     func confingure(by user: User)  {
         

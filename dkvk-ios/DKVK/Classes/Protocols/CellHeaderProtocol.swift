@@ -8,8 +8,9 @@
 
 import Foundation
 
+    // MARK: - protocol CellHeaderProtocol
+
 protocol CellHeaderProtocol {
 	associatedtype CellType
-	
 	var cellModels: [CellType] { get }
 }

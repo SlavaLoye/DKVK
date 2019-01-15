@@ -9,16 +9,23 @@
 import UIKit
 
 final class CreatePostViewController: UIViewController {
+    
+    //MARK: - @IBOutlet()
+    
     @IBOutlet private weak var textView: UITextView!
     @IBOutlet private weak var doneButton: UIButton!
     @IBOutlet private weak var postImageView: UIImageView!
     @IBOutlet private weak var crossImageView: UIImageView!
     
+    
+     //MARK: - properties
+    
     private let model = CreatePostModel()
+    
+    //MARK: - viewDidLoad()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         Decorator.decorate(vc: self)
         textView.delegate = self
         addTargets()
@@ -26,6 +33,8 @@ final class CreatePostViewController: UIViewController {
         clear()
     }
 }
+
+    //MARK: - extension CreatePostViewController: UITextViewDelegate()
 
 extension CreatePostViewController: UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
@@ -50,6 +59,8 @@ private extension CreatePostViewController {
         doneButton.addTarget(self, action: #selector(doneButtonClicked), for: .touchUpInside)
     }
     
+    //MARK: - addGestures()
+    
     func addGestures() {
         let postImageTapGesture = UITapGestureRecognizer(target: self, action: #selector(postImageClicked))
         postImageView.addGestureRecognizer(postImageTapGesture)
@@ -58,6 +69,8 @@ private extension CreatePostViewController {
         crossImageView.addGestureRecognizer(crossTapGesture)
     }
     
+    //MARK: - postImageClicked()
+    
     @objc func postImageClicked() {
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
@@ -65,9 +78,13 @@ private extension CreatePostViewController {
         present(imagePickerController, animated: true, completion: nil)
     }
     
+    //MARK: - crossImageClicked()
+    
     @objc func crossImageClicked() {
         updatePostImageView(image: nil)
     }
+    
+    //MARK: - objc doneButtonClicked()
     
     @objc func doneButtonClicked() {
         guard let user = AuthManager.shared.currentUser else {
@@ -86,6 +103,8 @@ private extension CreatePostViewController {
         }
     }
     
+    //MARK: - doneButtonClicked()
+    
     func updatePostImageView(image: UIImage?) {
         guard let image = image else {
             postImageView.image = #imageLiteral(resourceName: "tap_button")
@@ -97,6 +116,9 @@ private extension CreatePostViewController {
     }
 }
 
+
+    //MARK: - private extension CreatePostViewController(Decorator)
+
 private extension CreatePostViewController {
     final class Decorator {
         static func decorate(vc: CreatePostViewController) {
@@ -106,6 +128,8 @@ private extension CreatePostViewController {
         }
     }
 }
+
+    //MARK: - extension CreatePostViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate()
 
 extension CreatePostViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {

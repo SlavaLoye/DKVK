@@ -10,6 +10,9 @@
 import Foundation
 
 final class Message: Codable {
+    
+    //MARK: -  properties
+    
     var id: String
     var senderId: String? // id of sender user
     var text: String?

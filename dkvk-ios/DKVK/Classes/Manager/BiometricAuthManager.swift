@@ -31,6 +31,8 @@ class BiometricAuthManager {
         return context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil)
     }
     
+     //MARK: -  biometricType
+    
     func biometricType() -> BiometricType {
         let _ = context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil)
         switch context.biometryType {
@@ -42,6 +44,8 @@ class BiometricAuthManager {
             return .faceID
         }
     }
+    
+    //MARK: -  authenticateUser()
     
     func authenticateUser(completion: @escaping ItemClosure<CustomErrors?>) {
         

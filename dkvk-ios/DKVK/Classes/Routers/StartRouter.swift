@@ -9,6 +9,9 @@
 import UIKit
 
 final class StartRouter {
+    
+     // MARK: - singleton
+    
     static let shared = StartRouter()
     
     private init() {}

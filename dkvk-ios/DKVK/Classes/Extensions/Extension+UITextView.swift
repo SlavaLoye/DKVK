@@ -9,17 +9,17 @@
 
 import UIKit
 
-/// Extend UITextView and implemented UITextViewDelegate to listen for changes
+//  MARK: -  Extend UITextView and implemented UITextViewDelegate to listen for changes
 extension UITextView: UITextViewDelegate {
     
-    /// Resize the placeholder when the UITextView bounds change
+    // MARK: Resize the placeholder when the UITextView bounds change
     override open var bounds: CGRect {
         didSet {
             self.resizePlaceholder()
         }
     }
     
-    /// The UITextView placeholder text
+    // MARK: - The UITextView placeholder text
     var placeholder: String? {
         get {
             var placeholderText: String?
@@ -51,10 +51,14 @@ extension UITextView: UITextViewDelegate {
     
 }
 
+//  MARK: private extension UITextView
+
 private extension UITextView {
     
     /// Resize the placeholder UILabel to make sure it's in the same position as the UITextView text
+    
     func resizePlaceholder() {
+        
         if let placeholderLabel = self.viewWithTag(100) as! UILabel? {
             let labelX = self.textContainer.lineFragmentPadding
             let labelY = self.textContainerInset.top - 2

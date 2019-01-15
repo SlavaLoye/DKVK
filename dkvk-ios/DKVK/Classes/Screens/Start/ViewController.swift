@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet private weak var signUpButton: UIButton!
     @IBOutlet private weak var signInButton: UIButton!
     @IBOutlet private weak var titleLabel: UILabel!
-    @IBOutlet private weak var logoView: UIImageView!
+ //   @IBOutlet private weak var logoView: UIImageView!
     
     //MARK: -  viewDidLoad()
     
@@ -25,19 +25,27 @@ class ViewController: UIViewController {
         addTargets()
     }
     
+    //MARK: -  viewWillAppear()
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: true)
     }
+    
+    //MARK: -  addTargets()
     
     private func addTargets() {
         signUpButton.addTarget(self, action: #selector(signUpButtonClicked), for: .touchUpInside)
         signInButton.addTarget(self, action: #selector(signinButtonClicked), for: .touchUpInside)
     }
     
+    //MARK: -  signinButtonClicked()
+    
     @objc private func signinButtonClicked() {
         StartRouter.shared.goToLoginScreen(from: self)
     }
+    
+    //MARK: -  signUpButtonClicked()
     
     @objc private func signUpButtonClicked() {
         StartRouter.shared.goToRegisterScreen(from: self)
@@ -50,7 +58,6 @@ extension ViewController {
     fileprivate class Decorator {
         static let buttonCornerRadius: CGFloat = 4
         private init() {}
-        
         static func decorate(_ vc: ViewController) {
             vc.signUpButton.layer.cornerRadius = buttonCornerRadius
             vc.signUpButton.layer.borderColor = #colorLiteral(red: 0.7450980392, green: 0.7450980392, blue: 0.7450980392, alpha: 1)

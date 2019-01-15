@@ -9,6 +9,7 @@
 import UIKit
 
 extension NSLayoutConstraint {
+    
 	static func quadroAspect(on view: UIView) -> NSLayoutConstraint {
 		return NSLayoutConstraint.init(item: view, attribute: .height, relatedBy: .equal, toItem: view, attribute: .width, multiplier: 1, constant: 0)
 	}

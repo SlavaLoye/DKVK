@@ -8,13 +8,15 @@
 
 import Foundation
 
-/// better use own that alamofire one
+// MARK: - better use own that alamofire one
+
 enum Result<Value> {
     case success(Value)
     case failure(Error)
 }
 
-/// can be created ApiErrors and etc.
+//  MARK: - can be created ApiErrors and etc.
+
 enum CustomErrors {
     case invalidEmail
     case unknownError
@@ -22,6 +24,8 @@ enum CustomErrors {
     case keychainError
     case biometricAuthError(String)
 }
+
+//  MARK: - extension CustomErrors: LocalizedError
 
 extension CustomErrors: LocalizedError {
     /// can be created extension for String

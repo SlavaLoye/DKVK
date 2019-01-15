@@ -11,6 +11,8 @@ import UIKit
 
 final class CreatePostModel {
     
+    //MARK: - privet propirties
+    
     private(set) var text: String?
     private(set) var image: UIImage?
     
@@ -22,9 +24,13 @@ final class CreatePostModel {
         self.image = image
     }
     
+    //MARK: -  compyted properties Data
+    
     var imageData: Data? {
         return image?.jpegData(compressionQuality: 0.5)
     }
+    
+    //MARK: -  compyted properties Bool
     
     var isFilled: Bool {
         return text != nil || image != nil
