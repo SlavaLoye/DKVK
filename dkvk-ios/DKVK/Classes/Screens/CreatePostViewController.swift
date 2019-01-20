@@ -45,6 +45,7 @@ extension CreatePostViewController: UITextViewDelegate {
 
 private extension CreatePostViewController {
     private func set(image: UIImage?) {
+        // проверяем фоточку
         updatePostImageView(image: image)
         model.set(image: image)
     }

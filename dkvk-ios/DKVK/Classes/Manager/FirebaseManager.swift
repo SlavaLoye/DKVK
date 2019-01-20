@@ -9,9 +9,8 @@
 import Foundation
 import FirebaseDatabase
 
-//MARK: - FirebaseManager
-
 class FirebaseManager {
+    
     var sourceRef: DatabaseReference {
         return Database.database().reference()
     }
@@ -19,5 +18,8 @@ class FirebaseManager {
     var usersRef: DatabaseReference {
         return sourceRef.child("users")
     }
+    
+    var chatsRef: DatabaseReference {
+        return sourceRef.child("chats")
+    }
 }
-
