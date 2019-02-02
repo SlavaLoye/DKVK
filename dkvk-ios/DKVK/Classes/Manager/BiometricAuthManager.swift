@@ -34,14 +34,16 @@ class BiometricAuthManager {
      //MARK: -  biometricType
     
     func biometricType() -> BiometricType {
-        let _ = context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil)
+        let biometric = context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil)
         switch context.biometryType {
+            
         case .none:
+            print(biometric)
             return .none
         case .touchID:
             return .touchID
         case .faceID:
-            return .faceID
+            return .faceID 
         }
     }
     

@@ -12,7 +12,9 @@ import FirebaseStorage
 import FirebaseAuth
 
 class AuthManager: FirebaseManager {
+    
     var currentUser: User?
+    
     static let shared = AuthManager()
     
     private let auth = Auth.auth()

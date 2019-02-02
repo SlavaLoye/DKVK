@@ -15,12 +15,23 @@ class ChatViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: - properties
+    
+    private var user: DKUser?
+    private lazy var conntroller = ChatController.init(viewController: self)
+    
+    convenience init(user: DKUser) {
+        self.init()
+        self.user = user
+}
+    
+    // MARK: - viewDidLoad()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         delegating()
+        
     }
-    
     
     // MARK: - delegating()
     
@@ -43,7 +54,7 @@ extension ChatViewController: UITableViewDelegate {
 extension ChatViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        
+
         return cell
     }
     

@@ -12,6 +12,7 @@ import FirebaseStorage
     //MARK: - StorageManager
 
 class StorageManager {
+    
     static let shared = StorageManager()
     
     private init() {}

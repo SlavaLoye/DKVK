@@ -9,6 +9,7 @@
 import Foundation
 
 class DKUser: Codable {
+    
     var id: String?
     var birthday: TimeInterval?
     var email: String?

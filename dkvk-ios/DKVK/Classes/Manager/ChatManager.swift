@@ -14,7 +14,14 @@ final class ChatManager: FirebaseManager {
     
     static let shared = ChatManager()
     
+     //MARK: -  private init
+    
+    private override init() {}
+    
+    //MARK: -  properties
+    
     func send(message: Message, on chat: Chat) {
+        
         guard let dict = message.dictionary else {
             return
         }
@@ -84,7 +91,7 @@ final class ChatManager: FirebaseManager {
         let messagesRef = chatsRef.child(chatId).child("messages")
         messagesRef.observe(.value) { (snapshot) in
             if let dict = snapshot.value as? [String: [String: Any]] {
-                let messages = dict.map { try? Message.init(from: $0.value) }.compactMap { $0 }.sorted { $0.time ?? 0 < $1.time ?? 0 }
+                let messages = dict.map { try? Message.init(from: $0.value)}.compactMap { $0 }.sorted { $0.time ?? 0 < $1.time ?? 0 }
                 callback(messages)
             }
         }

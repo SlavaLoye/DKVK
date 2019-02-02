@@ -10,7 +10,10 @@ import UIKit
 import Firebase
 
 final class UserManager: FirebaseManager {
+    
     static let shared = UserManager()
+    
+    private override init() {}
     
     var currentUser: DKUser?
     

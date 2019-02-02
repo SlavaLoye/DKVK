@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChatViewController" customModule="DKVK" customModuleProvider="target">
             <connections>
-                <outlet property="tableView" destination="1cS-g2-w9Q" id="kiG-Wt-9fg"/>
+                <outlet property="tableView" destination="1cS-g2-w9Q" id="nE8-Vj-jhK"/>
                 <outlet property="view" destination="zub-L2-O8B" id="iPt-WP-2Kw"/>
             </connections>
         </placeholder>
