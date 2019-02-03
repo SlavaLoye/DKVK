@@ -6,12 +6,13 @@
 //  Copyright © 2019 Hadevs. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class Chat: Codable {
     var id: String?
     var messages: [Message] = []
     var users: [DKUser] = []
+
     
     // for first chat
     init(id: String, users: [DKUser]) {
@@ -22,5 +23,6 @@ class Chat: Codable {
     var oponent: DKUser? {
         return users.filter { UserManager.shared.currentUser?.id != $0.id }.first
     }
+    
 }
 

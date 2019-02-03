@@ -22,7 +22,7 @@ final class UserManager: FirebaseManager {
             return
         }
         
-        usersRef.child(currentUserId).observeSingleEvent(of: .value) { (snapshot) in
+        usersRef.child(currentUserId).observeSingleEvent(of: .value) {(snapshot) in
             if let dict = snapshot.value as? [String: Any] {
                 self.currentUser = try? DKUser.init(from: dict)
                 callback?()

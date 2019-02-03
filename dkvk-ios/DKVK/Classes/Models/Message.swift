@@ -21,4 +21,16 @@ final class Message: Codable {
     init() {
         id = UUID().uuidString
     }
+    
+   convenience init(text: String) {
+        self.init()
+    senderId = UserManager.shared.currentUser?.id
+    self.text = text
+    self.time = Date().timeIntervalSince1970
+        
+    }
+    
+    func getText() -> String {
+        return text ?? ""
+    }
 }

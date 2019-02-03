@@ -42,6 +42,7 @@ final class ChatManager: FirebaseManager {
     }
     
     func checkIsChatExist(chat: Chat, callback: @escaping ItemClosure<Bool>) {
+        
         guard let chatId = chat.id else {
             return
         }
@@ -52,6 +53,7 @@ final class ChatManager: FirebaseManager {
     }
     
     func startChat(chat: Chat, callback: @escaping VoidClosure) {
+        
         guard let chatId = chat.id else {
             return
         }

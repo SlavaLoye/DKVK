@@ -11,6 +11,7 @@
 		6C00BA0921EFC7B300F95DEF /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C00BA0821EFC7B300F95DEF /* Chat.swift */; };
 		6C25D61021FCF2D50013E503 /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C25D60F21FCF2D50013E503 /* ChatController.swift */; };
 		6C25D61221FCF3EF0013E503 /* Lyfecycable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C25D61121FCF3EF0013E503 /* Lyfecycable.swift */; };
+		6C9B045E2206209B00B69932 /* ChatDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9B045D2206209B00B69932 /* ChatDataProvider.swift */; };
 		6CBBFA2221EA7FA500DE78FD /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBBFA2121EA7FA500DE78FD /* UserManager.swift */; };
 		6CCBE6EC21E8F9BF00B134FB /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCBE6EA21E8F9BF00B134FB /* ChatsViewController.swift */; };
 		6CCBE6ED21E8F9BF00B134FB /* ChatsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CCBE6EB21E8F9BF00B134FB /* ChatsViewController.xib */; };
@@ -95,6 +96,7 @@
 		6C00BA0821EFC7B300F95DEF /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		6C25D60F21FCF2D50013E503 /* ChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
 		6C25D61121FCF3EF0013E503 /* Lyfecycable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lyfecycable.swift; sourceTree = "<group>"; };
+		6C9B045D2206209B00B69932 /* ChatDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatDataProvider.swift; sourceTree = "<group>"; };
 		6CBBFA2121EA7FA500DE78FD /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		6CCBE6EA21E8F9BF00B134FB /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
 		6CCBE6EB21E8F9BF00B134FB /* ChatsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatsViewController.xib; sourceTree = "<group>"; };
@@ -224,8 +226,9 @@
 			isa = PBXGroup;
 			children = (
 				6CCBE6EE21E907C000B134FB /* ChatViewController.swift */,
-				6CCBE6EF21E907C000B134FB /* ChatViewController.xib */,
 				6C25D60F21FCF2D50013E503 /* ChatController.swift */,
+				6C9B045D2206209B00B69932 /* ChatDataProvider.swift */,
+				6CCBE6EF21E907C000B134FB /* ChatViewController.xib */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -705,6 +708,7 @@
 				6CCBE6F521E9085B00B134FB /* Message.swift in Sources */,
 				6CF7C50A21DCC27A009F150A /* PostManager.swift in Sources */,
 				6CFC02FA21DD4858008577CE /* Extensions+Encodable.swift in Sources */,
+				6C9B045E2206209B00B69932 /* ChatDataProvider.swift in Sources */,
 				6C25D61221FCF3EF0013E503 /* Lyfecycable.swift in Sources */,
 				7CAAAD0521B44BD700FBF963 /* ViewController.swift in Sources */,
 				6CF8ADD221D7C91600CD0064 /* FirebaseResult.swift in Sources */,

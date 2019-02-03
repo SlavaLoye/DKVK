@@ -14,30 +14,33 @@ class ChatViewController: UIViewController {
      // MARK: - @IBOutlet
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var textField: UITextField!
     
     // MARK: - properties
     
     private var user: DKUser?
-    private lazy var conntroller = ChatController.init(viewController: self)
+    private var chat: Chat?
     
-    convenience init(user: DKUser) {
+    private lazy var conntroller = ChatController.init(viewController: self, chat: chat!) //48
+    
+    convenience init(user: DKUser, chat: Chat) {
         self.init()
         self.user = user
+        self.chat = chat
 }
     
     // MARK: - viewDidLoad()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        delegating()
+       // delegating()
+        conntroller.viewDidLoad()
         
     }
     
-    // MARK: - delegating()
-    
-    private func delegating() {
-        tableView.delegate = self
-        tableView.dataSource = self
+    @IBAction func sendClicked() {
+        let text =  textField.text
+        conntroller.sendButtonClicked(with: text)
     }
 }
 
