@@ -9,7 +9,6 @@
 import UIKit
 
 protocol Lyfecycable {
-    
     func viewDidAppear()
     func viewDidLoad()
     func viewWillAppear()

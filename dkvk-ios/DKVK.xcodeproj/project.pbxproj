@@ -22,6 +22,9 @@
 		6CCBE6F721E9088300B134FB /* DKUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCBE6F621E9088300B134FB /* DKUser.swift */; };
 		6CCBE6F921E908B200B134FB /* CustomErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCBE6F821E908B200B134FB /* CustomErrors.swift */; };
 		6CCBE6FB21E9094300B134FB /* Extension+UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCBE6FA21E9094300B134FB /* Extension+UITextView.swift */; };
+		6CF736CC2207024E0020FFE0 /* TextMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF736CB2207024E0020FFE0 /* TextMessageTableViewCell.swift */; };
+		6CF736CE220702A00020FFE0 /* MyTextMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CF736CD220702A00020FFE0 /* MyTextMessageTableViewCell.xib */; };
+		6CF736D0220706290020FFE0 /* OponentTextMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CF736CF220706290020FFE0 /* OponentTextMessageTableViewCell.xib */; };
 		6CF7C50621DCC22D009F150A /* BiometricAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF7C50521DCC22D009F150A /* BiometricAuthManager.swift */; };
 		6CF7C50821DCC261009F150A /* SecureStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF7C50721DCC261009F150A /* SecureStorageManager.swift */; };
 		6CF7C50A21DCC27A009F150A /* PostManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF7C50921DCC27A009F150A /* PostManager.swift */; };
@@ -107,6 +110,9 @@
 		6CCBE6F621E9088300B134FB /* DKUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DKUser.swift; sourceTree = "<group>"; };
 		6CCBE6F821E908B200B134FB /* CustomErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomErrors.swift; sourceTree = "<group>"; };
 		6CCBE6FA21E9094300B134FB /* Extension+UITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UITextView.swift"; sourceTree = "<group>"; };
+		6CF736CB2207024E0020FFE0 /* TextMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMessageTableViewCell.swift; sourceTree = "<group>"; };
+		6CF736CD220702A00020FFE0 /* MyTextMessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyTextMessageTableViewCell.xib; sourceTree = "<group>"; };
+		6CF736CF220706290020FFE0 /* OponentTextMessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OponentTextMessageTableViewCell.xib; sourceTree = "<group>"; };
 		6CF7C50521DCC22D009F150A /* BiometricAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthManager.swift; sourceTree = "<group>"; };
 		6CF7C50721DCC261009F150A /* SecureStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureStorageManager.swift; sourceTree = "<group>"; };
 		6CF7C50921DCC27A009F150A /* PostManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostManager.swift; sourceTree = "<group>"; };
@@ -211,6 +217,16 @@
 				6CF9CAB421EB7EF200936690 /* CreatePostViewController.xib */,
 			);
 			name = CreatePos;
+			sourceTree = "<group>";
+		};
+		6CF736CA2207022D0020FFE0 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				6CF736CB2207024E0020FFE0 /* TextMessageTableViewCell.swift */,
+				6CF736CD220702A00020FFE0 /* MyTextMessageTableViewCell.xib */,
+				6CF736CF220706290020FFE0 /* OponentTextMessageTableViewCell.xib */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 		6CF7C50F21DCC747009F150A /* Post */ = {
@@ -451,9 +467,9 @@
 			children = (
 				7CAAAD3C21B4574900FBF963 /* Extensions+UIView.swift */,
 				7C61EA3621C6C06100D1BA6A /* Extensions+UIViewController.swift */,
+				6CFC02F921DD4858008577CE /* Extensions+Encodable.swift */,
 				7CAAAD3E21B4583B00FBF963 /* Extensions+NSLayoutConstraint.swift */,
 				6CFC02F721DD483A008577CE /* Extensions+Decodable.swift */,
-				6CFC02F921DD4858008577CE /* Extensions+Encodable.swift */,
 				6CCBE6FA21E9094300B134FB /* Extension+UITextView.swift */,
 			);
 			path = Extensions;
@@ -462,6 +478,7 @@
 		7CAAAD4021B4599300FBF963 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				6CF736CA2207022D0020FFE0 /* Chat */,
 				7CF5607021BEE50100A39099 /* Text Field Cell */,
 				7CF5606621BEDD4E00A39099 /* Segmenter Cell */,
 				7CE1583521BEDCF0005449E5 /* Info User Cell */,
@@ -608,12 +625,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CF736CE220702A00020FFE0 /* MyTextMessageTableViewCell.xib in Resources */,
 				7CF5606A21BEDD6A00A39099 /* SegmenterTableViewCell.xib in Resources */,
 				7CAAAD4421B459D700FBF963 /* InfoUserTableViewCell.xib in Resources */,
 				6CCBE6F121E907C000B134FB /* ChatViewController.xib in Resources */,
 				6CF8ADD921D80BEB00CD0064 /* LoginViewController.xib in Resources */,
 				7CE1583221BED814005449E5 /* HeaderTitleView.xib in Resources */,
 				6CF8ADE621D8173000CD0064 /* UserHeaderView.xib in Resources */,
+				6CF736D0220706290020FFE0 /* OponentTextMessageTableViewCell.xib in Resources */,
 				7CAAAD0D21B44BD900FBF963 /* LaunchScreen.storyboard in Resources */,
 				6CF9CAB621EB7EF200936690 /* CreatePostViewController.xib in Resources */,
 				7CAAAD2321B44C3F00FBF963 /* ViewController.xib in Resources */,
@@ -741,6 +760,7 @@
 				7CAAAD3D21B4574900FBF963 /* Extensions+UIView.swift in Sources */,
 				7CAAAD2C21B4538B00FBF963 /* StartRouter.swift in Sources */,
 				6CF8ADD421D7CBF100CD0064 /* StorageManager.swift in Sources */,
+				6CF736CC2207024E0020FFE0 /* TextMessageTableViewCell.swift in Sources */,
 				6CF7C51221DCC761009F150A /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

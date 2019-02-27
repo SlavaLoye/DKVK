@@ -21,7 +21,7 @@ class ChatViewController: UIViewController {
     private var user: DKUser?
     private var chat: Chat?
     
-    private lazy var conntroller = ChatController.init(viewController: self, chat: chat!) //48
+    private lazy var controller = ChatController.init(viewController: self, chat: chat!) //48
     
     convenience init(user: DKUser, chat: Chat) {
         self.init()
@@ -34,13 +34,15 @@ class ChatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        // delegating()
-        conntroller.viewDidLoad()
-        
+        controller.viewDidLoad()
+        tableView.separatorColor = .clear
+    
     }
     
     @IBAction func sendClicked() {
         let text =  textField.text
-        conntroller.sendButtonClicked(with: text)
+        controller.sendButtonClicked(with: text)
+        
     }
 }
 

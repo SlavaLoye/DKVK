@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Tgt-Wb-krh" customClass="TextMessageTableViewCell" customModule="DKVK" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tgt-Wb-krh" id="I85-FX-cnS">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="127.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cdV-Dv-XSb">
+                        <rect key="frame" x="52" y="4" width="315" height="119.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dh-iU-h6h">
+                                <rect key="frame" x="8" y="8" width="299" height="79.5"/>
+                                <string key="text">cdscsdcdscdscnddjdjdjdjdjdjjdjdcbcbdjdjdweuerureurururuururururuururururururubnfbrfjfe vev ev ev ekv ev ev ekv ekv evj evi sdi vev ev ei vei v  dvs vs vs</string>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Vy-sE-FWC">
+                                <rect key="frame" x="8" y="95.5" width="299" height="16"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="blueColor"/>
+                        <constraints>
+                            <constraint firstItem="8dh-iU-h6h" firstAttribute="leading" secondItem="cdV-Dv-XSb" secondAttribute="leading" constant="8" id="Jdo-KP-Ytv"/>
+                            <constraint firstAttribute="bottom" secondItem="3Vy-sE-FWC" secondAttribute="bottom" constant="8" id="LB8-la-qhH"/>
+                            <constraint firstItem="3Vy-sE-FWC" firstAttribute="leading" secondItem="cdV-Dv-XSb" secondAttribute="leading" constant="8" id="TKJ-Xb-EPX"/>
+                            <constraint firstAttribute="trailing" secondItem="8dh-iU-h6h" secondAttribute="trailing" constant="8" id="bTw-gU-BvE"/>
+                            <constraint firstItem="8dh-iU-h6h" firstAttribute="top" secondItem="cdV-Dv-XSb" secondAttribute="top" constant="8" id="gTp-FE-y1x"/>
+                            <constraint firstAttribute="trailing" secondItem="3Vy-sE-FWC" secondAttribute="trailing" constant="8" id="jDd-NL-tQM"/>
+                            <constraint firstItem="3Vy-sE-FWC" firstAttribute="top" secondItem="8dh-iU-h6h" secondAttribute="bottom" constant="8" id="xkh-6B-BYt"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="cdV-Dv-XSb" firstAttribute="top" secondItem="I85-FX-cnS" secondAttribute="top" constant="4" id="7br-V8-tWb"/>
+                    <constraint firstItem="cdV-Dv-XSb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I85-FX-cnS" secondAttribute="leading" constant="52" id="CUC-eJ-B5S"/>
+                    <constraint firstAttribute="bottom" secondItem="cdV-Dv-XSb" secondAttribute="bottom" constant="4" id="GjN-CO-H3S"/>
+                    <constraint firstAttribute="trailing" secondItem="cdV-Dv-XSb" secondAttribute="trailing" constant="8" id="e3Y-e6-YzN"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="cloudView" destination="cdV-Dv-XSb" id="Q3F-db-mAR"/>
+                <outlet property="messageLabel" destination="8dh-iU-h6h" id="lN6-22-Uq3"/>
+                <outlet property="timeLabel" destination="3Vy-sE-FWC" id="NtF-gu-dTl"/>
+            </connections>
+            <point key="canvasLocation" x="110" y="-28"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="blueColor">
+            <color red="0.29803921568627451" green="0.45882352941176469" blue="0.63921568627450975" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
