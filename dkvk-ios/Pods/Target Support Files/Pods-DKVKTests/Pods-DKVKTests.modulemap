@@ -1,0 +1,6 @@
+framework module Pods_DKVKTests {
+  umbrella header "Pods-DKVKTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

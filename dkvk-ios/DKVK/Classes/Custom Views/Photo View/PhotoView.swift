@@ -15,6 +15,8 @@ final class PhotoView: UIView {
 	private let stackView = UIStackView()
 	private let plusView = UIImageView()
 	private let label = UILabel()
+    
+    
 	private let imageView = UIImageView()
 	var clicked: VoidClosure?  
 	

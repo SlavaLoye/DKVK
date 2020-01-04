@@ -2,14 +2,33 @@
 # platform :ios, '9.0'
 
 target 'DKVK' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
 
-use_frameworks!
-
-  pod 'Firebase/Core'
-  pod 'Firebase/Database'
-  pod 'Firebase/Storage'
-  pod 'Firebase/Auth'
+  # Pods for DKVK
+  pod 'Kingfisher', '~> 5.0'
+  pod 'Alamofire'
+  pod 'SPStorkController'
+  pod 'RangeSeekSlider'
+  pod 'AppsFlyerFramework' 
+  pod 'CryptoSwift'
+  pod 'Firebase/Analytics'
+  pod 'FirebaseABTesting'
+  pod 'FirebaseAuth'
+  pod 'FirebaseCore'
+  pod 'FirebaseDatabase'
+  pod 'FirebaseFirestore'
+  pod 'FirebaseFunctions' 
+  pod 'FirebaseMessaging'
+  pod 'FirebaseRemoteConfig'
+  pod 'FirebaseStorage'
   pod 'ARSLineProgress', '~> 3.1'
   pod 'Locksmith'
-  
+
+
+  target 'DKVKTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
 end

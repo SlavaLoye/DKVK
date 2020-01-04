@@ -79,7 +79,8 @@
 		7CF5606E21BEE1A300A39099 /* TextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CF5606C21BEE1A300A39099 /* TextTableViewCell.xib */; };
 		7CF5607321BEE55B00A39099 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF5607121BEE55B00A39099 /* TextFieldTableViewCell.swift */; };
 		7CF5607421BEE55B00A39099 /* TextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7CF5607221BEE55B00A39099 /* TextFieldTableViewCell.xib */; };
-		B2972732B4C176570C356165 /* Pods_DKVK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22BBCB95EDE0DA29835604C1 /* Pods_DKVK.framework */; };
+		D1268A9DA20FB5904E4B10C5 /* Pods_DKVKTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09ECCA330002C4C3E5D35323 /* Pods_DKVKTests.framework */; };
+		F4116E733F827D14B7EC23B4 /* Pods_DKVK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56E535F85AAC43BD832F5DDC /* Pods_DKVK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,8 +94,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		22BBCB95EDE0DA29835604C1 /* Pods_DKVK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DKVK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		54341E1F00487674AA461E73 /* Pods-DKVK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DKVK.release.xcconfig"; path = "Pods/Target Support Files/Pods-DKVK/Pods-DKVK.release.xcconfig"; sourceTree = "<group>"; };
+		09ECCA330002C4C3E5D35323 /* Pods_DKVKTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DKVKTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A9C3898545A9982FE938B0C /* Pods-DKVKTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DKVKTests.release.xcconfig"; path = "Target Support Files/Pods-DKVKTests/Pods-DKVKTests.release.xcconfig"; sourceTree = "<group>"; };
+		56E535F85AAC43BD832F5DDC /* Pods_DKVK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DKVK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C00BA0621EFC51700F95DEF /* ChatManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatManager.swift; sourceTree = "<group>"; };
 		6C00BA0821EFC7B300F95DEF /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		6C25D60F21FCF2D50013E503 /* ChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 		6CFC02F921DD4858008577CE /* Extensions+Encodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+Encodable.swift"; sourceTree = "<group>"; };
 		6CFDC8B321D3C2C300232DBD /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
 		6CFDC8B521D3C45000232DBD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		79A1CD805740AE49C3808B65 /* Pods-DKVK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DKVK.debug.xcconfig"; path = "Target Support Files/Pods-DKVK/Pods-DKVK.debug.xcconfig"; sourceTree = "<group>"; };
 		7C61EA3221C6BECD00D1BA6A /* RegisterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
 		7C61EA3421C6BF1300D1BA6A /* Sex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sex.swift; sourceTree = "<group>"; };
 		7C61EA3621C6C06100D1BA6A /* Extensions+UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+UIViewController.swift"; sourceTree = "<group>"; };
@@ -171,7 +174,8 @@
 		7CF5606C21BEE1A300A39099 /* TextTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextTableViewCell.xib; sourceTree = "<group>"; };
 		7CF5607121BEE55B00A39099 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
 		7CF5607221BEE55B00A39099 /* TextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldTableViewCell.xib; sourceTree = "<group>"; };
-		E58DFCAA07766F1306BE98CE /* Pods-DKVK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DKVK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DKVK/Pods-DKVK.debug.xcconfig"; sourceTree = "<group>"; };
+		86B140C48AE96C5CC36006F2 /* Pods-DKVK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DKVK.release.xcconfig"; path = "Target Support Files/Pods-DKVK/Pods-DKVK.release.xcconfig"; sourceTree = "<group>"; };
+		C92F131D2BF7790EA9FCBB7F /* Pods-DKVKTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DKVKTests.debug.xcconfig"; path = "Target Support Files/Pods-DKVKTests/Pods-DKVKTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,7 +183,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2972732B4C176570C356165 /* Pods_DKVK.framework in Frameworks */,
+				F4116E733F827D14B7EC23B4 /* Pods_DKVK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,20 +191,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1268A9DA20FB5904E4B10C5 /* Pods_DKVKTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0395D6427AA8AF3170179E07 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				22BBCB95EDE0DA29835604C1 /* Pods_DKVK.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		6CCBE6E421E8F7F900B134FB /* Chats */ = {
 			isa = PBXGroup;
 			children = (
@@ -330,8 +327,8 @@
 				7CAAAD0121B44BD700FBF963 /* DKVK */,
 				7CAAAD1621B44BD900FBF963 /* DKVKTests */,
 				7CAAAD0021B44BD700FBF963 /* Products */,
-				A8495B5689BA07393C78B0CD /* Pods */,
-				0395D6427AA8AF3170179E07 /* Frameworks */,
+				B4C9BE88114F102AF61E7CBE /* Pods */,
+				FB283BFC075F410495EBD106 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -533,13 +530,25 @@
 			path = "Text Field Cell";
 			sourceTree = "<group>";
 		};
-		A8495B5689BA07393C78B0CD /* Pods */ = {
+		B4C9BE88114F102AF61E7CBE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E58DFCAA07766F1306BE98CE /* Pods-DKVK.debug.xcconfig */,
-				54341E1F00487674AA461E73 /* Pods-DKVK.release.xcconfig */,
+				79A1CD805740AE49C3808B65 /* Pods-DKVK.debug.xcconfig */,
+				86B140C48AE96C5CC36006F2 /* Pods-DKVK.release.xcconfig */,
+				C92F131D2BF7790EA9FCBB7F /* Pods-DKVKTests.debug.xcconfig */,
+				2A9C3898545A9982FE938B0C /* Pods-DKVKTests.release.xcconfig */,
 			);
 			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		FB283BFC075F410495EBD106 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				56E535F85AAC43BD832F5DDC /* Pods_DKVK.framework */,
+				09ECCA330002C4C3E5D35323 /* Pods_DKVKTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -549,11 +558,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7CAAAD1C21B44BD900FBF963 /* Build configuration list for PBXNativeTarget "DKVK" */;
 			buildPhases = (
-				00834B0EEB4FA0CF5854FC68 /* [CP] Check Pods Manifest.lock */,
+				ADDE4EB17DC1A11980F10E16 /* [CP] Check Pods Manifest.lock */,
 				7CAAACFB21B44BD700FBF963 /* Sources */,
 				7CAAACFC21B44BD700FBF963 /* Frameworks */,
 				7CAAACFD21B44BD700FBF963 /* Resources */,
-				AC4BB87B192350FB6E2799E3 /* [CP] Embed Pods Frameworks */,
+				0EA10D981C4904E5AD841435 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -568,6 +577,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7CAAAD1F21B44BD900FBF963 /* Build configuration list for PBXNativeTarget "DKVKTests" */;
 			buildPhases = (
+				FEA02482621D5741A722DD87 /* [CP] Check Pods Manifest.lock */,
 				7CAAAD0F21B44BD900FBF963 /* Sources */,
 				7CAAAD1021B44BD900FBF963 /* Frameworks */,
 				7CAAAD1121B44BD900FBF963 /* Resources */,
@@ -657,16 +667,37 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		00834B0EEB4FA0CF5854FC68 /* [CP] Check Pods Manifest.lock */ = {
+		0EA10D981C4904E5AD841435 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DKVK/Pods-DKVK-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DKVK/Pods-DKVK-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DKVK/Pods-DKVK-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADDE4EB17DC1A11980F10E16 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
 			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-DKVK-checkManifestLockResult.txt",
 			);
@@ -675,32 +706,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AC4BB87B192350FB6E2799E3 /* [CP] Embed Pods Frameworks */ = {
+		FEA02482621D5741A722DD87 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-DKVK/Pods-DKVK-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/ARSLineProgress/ARSLineProgress.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/Locksmith/Locksmith.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			inputFileListPaths = (
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ARSLineProgress.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Locksmith.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"$(DERIVED_FILE_DIR)/Pods-DKVKTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DKVK/Pods-DKVK-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -913,7 +938,7 @@
 		};
 		7CAAAD1D21B44BD900FBF963 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E58DFCAA07766F1306BE98CE /* Pods-DKVK.debug.xcconfig */;
+			baseConfigurationReference = 79A1CD805740AE49C3808B65 /* Pods-DKVK.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -932,7 +957,7 @@
 		};
 		7CAAAD1E21B44BD900FBF963 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 54341E1F00487674AA461E73 /* Pods-DKVK.release.xcconfig */;
+			baseConfigurationReference = 86B140C48AE96C5CC36006F2 /* Pods-DKVK.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -951,6 +976,7 @@
 		};
 		7CAAAD2021B44BD900FBF963 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C92F131D2BF7790EA9FCBB7F /* Pods-DKVKTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -971,6 +997,7 @@
 		};
 		7CAAAD2121B44BD900FBF963 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A9C3898545A9982FE938B0C /* Pods-DKVKTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

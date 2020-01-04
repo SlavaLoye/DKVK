@@ -21,7 +21,6 @@ final class Router {
         window = UIWindow(frame: frame)
         window?.makeKeyAndVisible()
         let vc = SecureStorageManager.shared.isLoggedIn() ? startControllerAfterAuth : ViewController()
-        
         window?.rootViewController = UINavigationController(rootViewController: vc)
     }
     

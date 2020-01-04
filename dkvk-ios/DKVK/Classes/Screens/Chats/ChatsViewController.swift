@@ -25,7 +25,6 @@ class ChatsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         delegating()
         ChatManager.shared.loadingChats { [unowned self] (chats) in
             self.chats = chats

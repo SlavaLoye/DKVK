@@ -76,6 +76,7 @@ extension FeedViewController: UITableViewDataSource {
         return cell
     }
     
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
     }

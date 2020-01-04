@@ -9,6 +9,7 @@
 import UIKit
 import ARSLineProgress
 
+
 class RegisterViewController: UIViewController {
     
     //MARK: -  @IBOutlet
@@ -250,3 +251,6 @@ extension RegisterViewController: UITableViewDataSource {
         return models.count
     }
 }
+
+
+
